@@ -5,14 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="800">
+        Title="Client Velib" Height="300" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="690" />
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="DisplayMemberPath" Value="name" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="690" />
+
+        </Style>
+    </Window.Resources>
     <Grid>
-        <ComboBox DisplayMemberPath="name" SelectionChanged="comboBox_SelectionChanged" x:Name="comboBox" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Width="500" Height="50"/>
-        <Label Content="Choississez un contrat" Margin="70,42,50,0" VerticalAlignment="Top" RenderTransformOrigin="2.608,-1.278" HorizontalAlignment="Right" Width="680" Height="30"/>
-        <Label Content="Choississez une station" HorizontalAlignment="Left" Margin="70,179,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboStation" SelectionChanged="stationSelected" DisplayMemberPath="name"  HorizontalAlignment="Left" Margin="50,220,0,0" VerticalAlignment="Top" Width="500"/>
-        <Label Content="Vélos disponibles : " HorizontalAlignment="Left" Margin="50,280,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ab" Content="0" HorizontalAlignment="Left" Margin="200,280,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Choississez un contrat" Margin="0,0,0,0"/>
+        <ComboBox Grid.Row="0" SelectionChanged="comboBox_SelectionChanged" x:Name="comboBox" HorizontalAlignment="Left" Margin="50,55,0,0"  />
+        <Label Grid.Row="1" Content="Choississez une station" HorizontalAlignment="Left"  Margin="50,0,0,0"/>
+        <ComboBox Grid.Row="1" x:Name="comboStation" SelectionChanged="stationSelected" Margin="0,50,0,0"/>
+        <Label Grid.Row="2" Content="Vélos disponibles : " HorizontalAlignment="Left"  Margin="50,0,0,0" VerticalAlignment="Top" Width="309"/>
+        <Label Grid.Row="2" x:Name="ab" Content="0"  Margin="0,50,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -42,13 +42,14 @@ namespace WpfApp1
         
         private void stationSelected(object sender, SelectionChangedEventArgs e)
         {
-            Console.WriteLine(comboStation.SelectedItem);
-            ab.Content = ((Station)comboStation.SelectedItem).available_bikes+"";
+            if(comboStation.SelectedItem != null)
+            {
+                ab.Content = ((Station)comboStation.SelectedItem).available_bikes+"";
+            }
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             stations = Client.GetStationsByContract((Contract)comboBox.SelectedItem);
-            Console.WriteLine("nb station : " + stations.Length);
             comboStation.ItemsSource = stations;
 
         }
