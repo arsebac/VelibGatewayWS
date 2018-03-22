@@ -9,13 +9,14 @@ Some clients using the gateway are available too.
 
 - ConsoleClient is a console client to check available bikes on a station
 
-- WpfApp1 correspond to a graphic interface.
+- WpfApp1 correspond to a graphic interface
 
+- AsyncClient implement an asynchrone client
 # Development Extensions
 
 - Graphical User Interface for the client 
 
-
+- Asynchronous version
 
 
 @author Francois Melkonian
