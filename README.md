@@ -21,4 +21,13 @@ Some clients using the gateway are available too.
 - Cached api : Each api call have useCache parameter, to let the client decide if he want to use cache.
 
 
+# Import and test project
+
+Steps to import and use project
+- Import the project from VelibGatewayWS.sln. The gateway and clients should come to solution explorater.
+- Each client are independent and have the gateway service reference. 
+- You can execute ConsoleClient, VelibClient and AsyncClient.
+
+
+
 @author Francois Melkonian
