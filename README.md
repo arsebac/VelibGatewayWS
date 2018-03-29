@@ -1,4 +1,4 @@
-#Velib Gateway Web Service
+# Velib Gateway Web Service
 
 An Intermediate Web Server that exposes SOAP API to access to the Velib Web Service (JC Decault : http://www.jcdecaux.com/ )
 Some clients using the gateway are available too.
