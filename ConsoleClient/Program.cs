@@ -36,7 +36,7 @@ namespace ConsoleClient
         static ServiceReference1.VelibServiceClient client = new VelibServiceClient();
         static void Main(string[] args)
         {
-            Contract[] contracts = client.GetContractsList();
+            Contract[] contracts = client.GetContractsList(true);
             bool end = false;
             do
             {
@@ -70,7 +70,7 @@ namespace ConsoleClient
         }
         public static void checkStations(Contract contract)
         {
-            Station[] stations = client.GetStationsByContract(contract);
+            Station[] stations = client.GetStationsByContract(contract,true);
             String request;
             bool end = false;
             Console.WriteLine("Vous avez sélectionné le contrat " + contract.name + ". " + stations.Length + " stations disponibles\n");

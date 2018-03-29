@@ -249,22 +249,22 @@ namespace ConsoleClient.ServiceReference1 {
     public interface IVelibService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetContractsList", ReplyAction="http://tempuri.org/IVelibService/GetContractsListResponse")]
-        ConsoleClient.ServiceReference1.Contract[] GetContractsList();
+        ConsoleClient.ServiceReference1.Contract[] GetContractsList(bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetContractsList", ReplyAction="http://tempuri.org/IVelibService/GetContractsListResponse")]
-        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> GetContractsListAsync();
+        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> GetContractsListAsync(bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetStationsByContract", ReplyAction="http://tempuri.org/IVelibService/GetStationsByContractResponse")]
-        ConsoleClient.ServiceReference1.Station[] GetStationsByContract(ConsoleClient.ServiceReference1.Contract contract);
+        ConsoleClient.ServiceReference1.Station[] GetStationsByContract(ConsoleClient.ServiceReference1.Contract contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetStationsByContract", ReplyAction="http://tempuri.org/IVelibService/GetStationsByContractResponse")]
-        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Station[]> GetStationsByContractAsync(ConsoleClient.ServiceReference1.Contract contract);
+        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Station[]> GetStationsByContractAsync(ConsoleClient.ServiceReference1.Contract contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SearchContract", ReplyAction="http://tempuri.org/IVelibService/SearchContractResponse")]
-        ConsoleClient.ServiceReference1.Contract[] SearchContract(string contract);
+        ConsoleClient.ServiceReference1.Contract[] SearchContract(string contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SearchContract", ReplyAction="http://tempuri.org/IVelibService/SearchContractResponse")]
-        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> SearchContractAsync(string contract);
+        System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> SearchContractAsync(string contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IVelibService/GetDataUsingDataContractResponse")]
         ConsoleClient.ServiceReference1.CompositeType GetDataUsingDataContract(ConsoleClient.ServiceReference1.CompositeType composite);
@@ -300,28 +300,28 @@ namespace ConsoleClient.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public ConsoleClient.ServiceReference1.Contract[] GetContractsList() {
-            return base.Channel.GetContractsList();
+        public ConsoleClient.ServiceReference1.Contract[] GetContractsList(bool useCache) {
+            return base.Channel.GetContractsList(useCache);
         }
         
-        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> GetContractsListAsync() {
-            return base.Channel.GetContractsListAsync();
+        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> GetContractsListAsync(bool useCache) {
+            return base.Channel.GetContractsListAsync(useCache);
         }
         
-        public ConsoleClient.ServiceReference1.Station[] GetStationsByContract(ConsoleClient.ServiceReference1.Contract contract) {
-            return base.Channel.GetStationsByContract(contract);
+        public ConsoleClient.ServiceReference1.Station[] GetStationsByContract(ConsoleClient.ServiceReference1.Contract contract, bool useCache) {
+            return base.Channel.GetStationsByContract(contract, useCache);
         }
         
-        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Station[]> GetStationsByContractAsync(ConsoleClient.ServiceReference1.Contract contract) {
-            return base.Channel.GetStationsByContractAsync(contract);
+        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Station[]> GetStationsByContractAsync(ConsoleClient.ServiceReference1.Contract contract, bool useCache) {
+            return base.Channel.GetStationsByContractAsync(contract, useCache);
         }
         
-        public ConsoleClient.ServiceReference1.Contract[] SearchContract(string contract) {
-            return base.Channel.SearchContract(contract);
+        public ConsoleClient.ServiceReference1.Contract[] SearchContract(string contract, bool useCache) {
+            return base.Channel.SearchContract(contract, useCache);
         }
         
-        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> SearchContractAsync(string contract) {
-            return base.Channel.SearchContractAsync(contract);
+        public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.Contract[]> SearchContractAsync(string contract, bool useCache) {
+            return base.Channel.SearchContractAsync(contract, useCache);
         }
         
         public ConsoleClient.ServiceReference1.CompositeType GetDataUsingDataContract(ConsoleClient.ServiceReference1.CompositeType composite) {

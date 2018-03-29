@@ -27,7 +27,7 @@ namespace WpfApp1
         public MainWindow()
         {
             Client = new VelibServiceReference.VelibServiceClient();
-            contracts = Client.GetContractsList();
+            contracts = Client.GetContractsList(true);
             InitializeComponent();
             comboBox.ItemsSource = contracts;
             comboStation.ItemsSource = stations;
@@ -35,10 +35,6 @@ namespace WpfApp1
 
         private VelibServiceClient Client { get; set; }
 
-        private void refresh(object sender, RoutedEventArgs e)
-        {
-            contracts = Client.GetContractsList();
-        }
         
         private void stationSelected(object sender, SelectionChangedEventArgs e)
         {
@@ -49,7 +45,7 @@ namespace WpfApp1
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            stations = Client.GetStationsByContract((Contract)comboBox.SelectedItem);
+            stations = Client.GetStationsByContract((Contract)comboBox.SelectedItem,true);
             comboStation.ItemsSource = stations;
 
         }

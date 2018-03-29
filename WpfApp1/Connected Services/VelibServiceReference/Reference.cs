@@ -249,22 +249,22 @@ namespace WpfApp1.VelibServiceReference {
     public interface IVelibService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetContractsList", ReplyAction="http://tempuri.org/IVelibService/GetContractsListResponse")]
-        WpfApp1.VelibServiceReference.Contract[] GetContractsList();
+        WpfApp1.VelibServiceReference.Contract[] GetContractsList(bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetContractsList", ReplyAction="http://tempuri.org/IVelibService/GetContractsListResponse")]
-        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> GetContractsListAsync();
+        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> GetContractsListAsync(bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetStationsByContract", ReplyAction="http://tempuri.org/IVelibService/GetStationsByContractResponse")]
-        WpfApp1.VelibServiceReference.Station[] GetStationsByContract(WpfApp1.VelibServiceReference.Contract contract);
+        WpfApp1.VelibServiceReference.Station[] GetStationsByContract(WpfApp1.VelibServiceReference.Contract contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetStationsByContract", ReplyAction="http://tempuri.org/IVelibService/GetStationsByContractResponse")]
-        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Station[]> GetStationsByContractAsync(WpfApp1.VelibServiceReference.Contract contract);
+        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Station[]> GetStationsByContractAsync(WpfApp1.VelibServiceReference.Contract contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SearchContract", ReplyAction="http://tempuri.org/IVelibService/SearchContractResponse")]
-        WpfApp1.VelibServiceReference.Contract[] SearchContract(string contract);
+        WpfApp1.VelibServiceReference.Contract[] SearchContract(string contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SearchContract", ReplyAction="http://tempuri.org/IVelibService/SearchContractResponse")]
-        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> SearchContractAsync(string contract);
+        System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> SearchContractAsync(string contract, bool useCache);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IVelibService/GetDataUsingDataContractResponse")]
         WpfApp1.VelibServiceReference.CompositeType GetDataUsingDataContract(WpfApp1.VelibServiceReference.CompositeType composite);
@@ -300,28 +300,28 @@ namespace WpfApp1.VelibServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public WpfApp1.VelibServiceReference.Contract[] GetContractsList() {
-            return base.Channel.GetContractsList();
+        public WpfApp1.VelibServiceReference.Contract[] GetContractsList(bool useCache) {
+            return base.Channel.GetContractsList(useCache);
         }
         
-        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> GetContractsListAsync() {
-            return base.Channel.GetContractsListAsync();
+        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> GetContractsListAsync(bool useCache) {
+            return base.Channel.GetContractsListAsync(useCache);
         }
         
-        public WpfApp1.VelibServiceReference.Station[] GetStationsByContract(WpfApp1.VelibServiceReference.Contract contract) {
-            return base.Channel.GetStationsByContract(contract);
+        public WpfApp1.VelibServiceReference.Station[] GetStationsByContract(WpfApp1.VelibServiceReference.Contract contract, bool useCache) {
+            return base.Channel.GetStationsByContract(contract, useCache);
         }
         
-        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Station[]> GetStationsByContractAsync(WpfApp1.VelibServiceReference.Contract contract) {
-            return base.Channel.GetStationsByContractAsync(contract);
+        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Station[]> GetStationsByContractAsync(WpfApp1.VelibServiceReference.Contract contract, bool useCache) {
+            return base.Channel.GetStationsByContractAsync(contract, useCache);
         }
         
-        public WpfApp1.VelibServiceReference.Contract[] SearchContract(string contract) {
-            return base.Channel.SearchContract(contract);
+        public WpfApp1.VelibServiceReference.Contract[] SearchContract(string contract, bool useCache) {
+            return base.Channel.SearchContract(contract, useCache);
         }
         
-        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> SearchContractAsync(string contract) {
-            return base.Channel.SearchContractAsync(contract);
+        public System.Threading.Tasks.Task<WpfApp1.VelibServiceReference.Contract[]> SearchContractAsync(string contract, bool useCache) {
+            return base.Channel.SearchContractAsync(contract, useCache);
         }
         
         public WpfApp1.VelibServiceReference.CompositeType GetDataUsingDataContract(WpfApp1.VelibServiceReference.CompositeType composite) {

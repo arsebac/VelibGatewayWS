@@ -16,7 +16,9 @@ Some clients using the gateway are available too.
 
 - Graphical User Interface for the client 
 
-- Asynchronous version
+- Asynchronous version. Use  MTObservableCollection to dynamically add stations and contracts to one thread to another.
+
+- Cached api : Each api call have useCache parameter, to let the client decide if he want to use cache.
 
 
 @author Francois Melkonian

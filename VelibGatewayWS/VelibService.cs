@@ -7,15 +7,28 @@ namespace VelibGatewayWS
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "VelibService" à la fois dans le code et le fichier de configuration.
     public class VelibService : IVelibService
     {
+        private CacheManager CacheManager;
         private Util util;
         public VelibService()
         {
             util = new Util();
+            CacheManager = CacheManager.Instance;
         }
 
-        public List<Contract> GetContractsList()
+        public List<Contract> GetContractsList(bool useCache)
         {
-            return JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+            if (!useCache)
+            {
+                return JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+
+            }
+            List<Contract>  contracts = CacheManager.GetContracts();
+            if(contracts == null)
+            {
+                contracts = JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+                CacheManager.AddContractsCache(contracts);
+            }
+            return contracts;
         }
 
         public string GetData(int value)
@@ -36,16 +49,41 @@ namespace VelibGatewayWS
             return composite;
         }
 
-        public List<Station> GetStationsByContract(Contract contract)
+        public List<Station> GetStationsByContract(Contract contract,bool useCache)
         {
+            if (useCache)
+            {
+                List<Station> stations = CacheManager.GetStations(contract);
+                if(stations == null)
+                {
+                    string result = util.ApiRequest("stations?contract=" + contract.name);
+                    stations =  JsonConvert.DeserializeObject<List<Station>>(result);
+                    CacheManager.AddStationsCache(stations,contract);
+                }
+                return stations;
+            }
+
             string res = util.ApiRequest("stations?contract=" + contract.name);
-            Console.WriteLine(res);
             return JsonConvert.DeserializeObject<List<Station>>(res);
         }
 
-        public List<Contract> SearchContract(string contractRequest)
+        public List<Contract> SearchContract(string contractRequest,bool useCache)
         {
-            List<Contract> contracts = JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+            List<Contract> contracts;
+            if (useCache)
+            {
+                contracts = CacheManager.GetContracts();
+                if(contracts == null)
+                { 
+                    contracts = JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+                    CacheManager.AddContractsCache(contracts);
+                }
+            }
+            else
+            {
+
+                contracts = JsonConvert.DeserializeObject<List<Contract>>(util.ApiRequest("contracts"));
+            }
             List<Contract> returnedContracts = new List<Contract>();
             foreach (Contract c in contracts)
             {

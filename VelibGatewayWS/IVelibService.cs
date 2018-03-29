@@ -12,12 +12,11 @@ namespace VelibGatewayWS
     public interface IVelibService
     {
         [OperationContract]
-        List<Contract> GetContractsList();
+        List<Contract> GetContractsList(bool useCache);
         [OperationContract]
-        List<Station> GetStationsByContract(Contract contract);
+        List<Station> GetStationsByContract(Contract contract,bool useCache);
         [OperationContract]
-        List<Contract> SearchContract(string contract);
-
+        List<Contract> SearchContract(string contract, bool useCache);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
