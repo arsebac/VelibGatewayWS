@@ -7,8 +7,9 @@ using System.Text;
 
 namespace VelibGatewayWS
 {
+    
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IService1" à la fois dans le code et le fichier de configuration.
-    [ServiceContract]
+    [ServiceContract(CallbackContract = typeof( IVelibGatewayCallback))]
     public interface IVelibService
     {
         [OperationContract]
@@ -19,6 +20,10 @@ namespace VelibGatewayWS
         List<Contract> SearchContract(string contract, bool useCache);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
+        [OperationContract]
+        void SubscribeContractEvent(string contract,int T);
+        [OperationContract]
+        void SubscribeStationEvent(Contract contract, Station station, int T);
 
         // TODO: ajoutez vos opérations de service ici
     }
