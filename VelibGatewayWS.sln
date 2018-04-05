@@ -5,17 +5,7 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibGatewayWS", "VelibGatewayWS\VelibGatewayWS.csproj", "{A3742124-34FE-45A9-A6CE-B3930FCD57D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibClient", "WpfApp1\VelibClient.csproj", "{A02EE218-3837-4497-AFB7-5E7FCF43D8E6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A3742124-34FE-45A9-A6CE-B3930FCD57D3} = {A3742124-34FE-45A9-A6CE-B3930FCD57D3}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{5FD24BFA-90AB-49CA-911C-BCC379EA6681}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A3742124-34FE-45A9-A6CE-B3930FCD57D3} = {A3742124-34FE-45A9-A6CE-B3930FCD57D3}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncClient", "AsyncClient\AsyncClient.csproj", "{10F9D9F7-011F-4AD3-8F1A-C5DE9173F205}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A3742124-34FE-45A9-A6CE-B3930FCD57D3} = {A3742124-34FE-45A9-A6CE-B3930FCD57D3}
 	EndProjectSection
@@ -35,18 +25,10 @@ Global
 		{A3742124-34FE-45A9-A6CE-B3930FCD57D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3742124-34FE-45A9-A6CE-B3930FCD57D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3742124-34FE-45A9-A6CE-B3930FCD57D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A02EE218-3837-4497-AFB7-5E7FCF43D8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A02EE218-3837-4497-AFB7-5E7FCF43D8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A02EE218-3837-4497-AFB7-5E7FCF43D8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A02EE218-3837-4497-AFB7-5E7FCF43D8E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5FD24BFA-90AB-49CA-911C-BCC379EA6681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5FD24BFA-90AB-49CA-911C-BCC379EA6681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD24BFA-90AB-49CA-911C-BCC379EA6681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD24BFA-90AB-49CA-911C-BCC379EA6681}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10F9D9F7-011F-4AD3-8F1A-C5DE9173F205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10F9D9F7-011F-4AD3-8F1A-C5DE9173F205}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10F9D9F7-011F-4AD3-8F1A-C5DE9173F205}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10F9D9F7-011F-4AD3-8F1A-C5DE9173F205}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D2CF5FA-5AE3-4ED7-B8DC-F80968AE7DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D2CF5FA-5AE3-4ED7-B8DC-F80968AE7DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D2CF5FA-5AE3-4ED7-B8DC-F80968AE7DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU

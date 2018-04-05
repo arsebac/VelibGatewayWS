@@ -65,6 +65,8 @@ namespace ConsoleApp1
                                 client.SubscribeStationEvent(contract, station, 0);
 
                                 Console.WriteLine($"Il y a actuellement {station.available_bikes} vélos disponible à la station {station.name}");
+
+                                Task.Factory.StartNew(() => client.GetStationsByContract(contract, false));
                                 find = true;
                                 break;
                             }
@@ -74,7 +76,6 @@ namespace ConsoleApp1
                                 Console.WriteLine("Aucunes stations pour la recherche '" + request + "'");
                             }
                             break;
-                        Task.Factory.StartNew(() => client.GetStationsByContract(contract, false));
 
                 }
             } while (!end);

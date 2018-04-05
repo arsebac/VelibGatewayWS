@@ -12,7 +12,7 @@ namespace VelibGatewayWS
         private CacheManager CacheManager;
         private Util util;
         Dictionary<string, Action<Contract>> ContractCB = new Dictionary<string, Action<Contract>>();
-        Dictionary<Contract, List<KeyValuePair<string,Action<Station>>>> StationCallback = new Dictionary<Contract, List<KeyValuePair<string, Action<Station>>>>();
+        Dictionary<string, List<KeyValuePair<string,Action<Station>>>> StationCallback = new Dictionary<string, List<KeyValuePair<string, Action<Station>>>>();
 
         public VelibService()
         {
@@ -91,9 +91,10 @@ namespace VelibGatewayWS
 
         private List<Station> CallbackStation(Contract contract, List<Station> stations)
         {
-            if (StationCallback.ContainsKey(contract))
+
+            if (StationCallback.ContainsKey(contract.name))
             {
-                foreach (KeyValuePair<string, Action<Station>> el in StationCallback[contract])
+                foreach (KeyValuePair<string, Action<Station>> el in StationCallback[contract.name])
                 {
                     foreach(Station testStation in stations)
                     {
@@ -140,12 +141,12 @@ namespace VelibGatewayWS
         public void SubscribeStationEvent(Contract contract, Station station, int T)
         {
             IVelibGatewayCallback subscriber = OperationContext.Current.GetCallbackChannel<IVelibGatewayCallback>();
-            if (!StationCallback.ContainsKey(contract))
+            if (!StationCallback.ContainsKey(contract.name))
             {
-                StationCallback[contract] = new List<KeyValuePair<string, Action<Station>>>();
+                StationCallback[contract.name] = new List<KeyValuePair<string, Action<Station>>>();
             }
             var found = false;
-            foreach(KeyValuePair<string, Action<Station>> el in StationCallback[contract])
+            foreach(KeyValuePair<string, Action<Station>> el in StationCallback[contract.name])
             {
                 if (el.Key.Equals(station.name))
                 {
@@ -159,7 +160,7 @@ namespace VelibGatewayWS
                 Action<Station> newAction = delegate { };
                 newAction += subscriber.CallBackStations;
                 KeyValuePair<string, Action<Station>> i = new KeyValuePair<string, Action<Station>>(station.name, newAction);
-                StationCallback[contract].Add(i);
+                StationCallback[contract.name].Add(i);
             }
         }
 
