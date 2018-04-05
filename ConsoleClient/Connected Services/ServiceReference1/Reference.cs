@@ -245,7 +245,7 @@ namespace ConsoleClient.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IVelibService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IVelibService", CallbackContract=typeof(ConsoleClient.ServiceReference1.IVelibServiceCallback))]
     public interface IVelibService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetContractsList", ReplyAction="http://tempuri.org/IVelibService/GetContractsListResponse")]
@@ -271,6 +271,28 @@ namespace ConsoleClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IVelibService/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ConsoleClient.ServiceReference1.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SubscribeContractEvent", ReplyAction="http://tempuri.org/IVelibService/SubscribeContractEventResponse")]
+        void SubscribeContractEvent(string contract, int T);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SubscribeContractEvent", ReplyAction="http://tempuri.org/IVelibService/SubscribeContractEventResponse")]
+        System.Threading.Tasks.Task SubscribeContractEventAsync(string contract, int T);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SubscribeStationEvent", ReplyAction="http://tempuri.org/IVelibService/SubscribeStationEventResponse")]
+        void SubscribeStationEvent(ConsoleClient.ServiceReference1.Contract contract, ConsoleClient.ServiceReference1.Station station, int T);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibService/SubscribeStationEvent", ReplyAction="http://tempuri.org/IVelibService/SubscribeStationEventResponse")]
+        System.Threading.Tasks.Task SubscribeStationEventAsync(ConsoleClient.ServiceReference1.Contract contract, ConsoleClient.ServiceReference1.Station station, int T);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IVelibServiceCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IVelibService/CallBackContract")]
+        void CallBackContract(ConsoleClient.ServiceReference1.Contract contract);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IVelibService/CallBackStations")]
+        void CallBackStations(ConsoleClient.ServiceReference1.Station stations);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -279,25 +301,26 @@ namespace ConsoleClient.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class VelibServiceClient : System.ServiceModel.ClientBase<ConsoleClient.ServiceReference1.IVelibService>, ConsoleClient.ServiceReference1.IVelibService {
+    public partial class VelibServiceClient : System.ServiceModel.DuplexClientBase<ConsoleClient.ServiceReference1.IVelibService>, ConsoleClient.ServiceReference1.IVelibService {
         
-        public VelibServiceClient() {
+        public VelibServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
         }
         
-        public VelibServiceClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public VelibServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
         }
         
-        public VelibServiceClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public VelibServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public VelibServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public VelibServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public VelibServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+        public VelibServiceClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
         public ConsoleClient.ServiceReference1.Contract[] GetContractsList(bool useCache) {
@@ -330,6 +353,22 @@ namespace ConsoleClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<ConsoleClient.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ConsoleClient.ServiceReference1.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public void SubscribeContractEvent(string contract, int T) {
+            base.Channel.SubscribeContractEvent(contract, T);
+        }
+        
+        public System.Threading.Tasks.Task SubscribeContractEventAsync(string contract, int T) {
+            return base.Channel.SubscribeContractEventAsync(contract, T);
+        }
+        
+        public void SubscribeStationEvent(ConsoleClient.ServiceReference1.Contract contract, ConsoleClient.ServiceReference1.Station station, int T) {
+            base.Channel.SubscribeStationEvent(contract, station, T);
+        }
+        
+        public System.Threading.Tasks.Task SubscribeStationEventAsync(ConsoleClient.ServiceReference1.Contract contract, ConsoleClient.ServiceReference1.Station station, int T) {
+            return base.Channel.SubscribeStationEventAsync(contract, station, T);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,9 +34,13 @@ namespace ConsoleClient
     class Program
     {
         static Comparaisons comparaisons = new Comparaisons();
-        static ServiceReference1.VelibServiceClient client = new VelibServiceClient();
+        static ServiceReference1.VelibServiceClient client;
         static void Main(string[] args)
         {
+
+            CalcServiceCallbackSink objsink = new CalcServiceCallbackSink();
+            InstanceContext iCntxt = new InstanceContext(objsink);
+            client = new VelibServiceClient(iCntxt);
             Contract[] contracts = client.GetContractsList(true);
             bool end = false;
             do
@@ -112,5 +117,21 @@ namespace ConsoleClient
 
         }
 
+        private class CalcServiceCallbackSink: ServiceReference1.IVelibServiceCallback
+        {
+            public CalcServiceCallbackSink()
+            {
+            }
+
+            public void CallBackContract(Contract contract)
+            {
+                Console.WriteLine(contract);
+            }
+
+            public void CallBackStations(Station stations)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
     }
 }

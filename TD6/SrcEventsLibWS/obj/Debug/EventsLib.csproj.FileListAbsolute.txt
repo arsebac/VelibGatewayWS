@@ -1,0 +1,21 @@
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLib\bin\Debug\EventsLib.dll
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLib\bin\Debug\EventsLib.pdb
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLib\obj\Debug\EventsLib.dll
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLib\obj\Debug\EventsLib.pdb
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\bin\Debug\EventsLib.dll
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\bin\Debug\EventsLib.pdb
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\obj\Debug\EventsLib.csprojResolveAssemblyReference.cache
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\obj\Debug\EventsLib.csproj.CoreCompileInputs.cache
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\obj\Debug\EventsLib.dll
+D:\WS Event SI4\SrcEventsLib\SrcEventsLib\obj\Debug\EventsLib.pdb
+D:\WS Event SI4\SrcEvents_WCF_WS\SrcEventsLibWS\bin\Debug\EventsLib.dll
+D:\WS Event SI4\SrcEvents_WCF_WS\SrcEventsLibWS\bin\Debug\EventsLib.pdb
+D:\WS Event SI4\SrcEvents_WCF_WS\SrcEventsLibWS\obj\Debug\EventsLib.csproj.CoreCompileInputs.cache
+D:\WS Event SI4\SrcEvents_WCF_WS\SrcEventsLibWS\obj\Debug\EventsLib.dll
+D:\WS Event SI4\SrcEvents_WCF_WS\SrcEventsLibWS\obj\Debug\EventsLib.pdb
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\bin\Debug\EventsLib.dll
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\bin\Debug\EventsLib.pdb
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\obj\Debug\EventsLib.csprojResolveAssemblyReference.cache
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\obj\Debug\EventsLib.csproj.CoreCompileInputs.cache
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\obj\Debug\EventsLib.dll
+E:\Projets\VS\VelibGatewayWS\TD6\SrcEventsLibWS\obj\Debug\EventsLib.pdb

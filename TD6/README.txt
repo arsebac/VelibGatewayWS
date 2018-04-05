@@ -1,0 +1,1 @@
+- Run Visual Studio as Administrator

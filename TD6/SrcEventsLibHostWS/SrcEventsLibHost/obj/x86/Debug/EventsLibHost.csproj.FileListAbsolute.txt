@@ -1,0 +1,18 @@
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\bin\Debug\EventsLibHost.exe.config
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\bin\Debug\EventsLibHost.exe
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\bin\Debug\EventsLibHost.pdb
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\bin\Debug\EventsLib.dll
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\bin\Debug\EventsLib.pdb
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.csprojResolveAssemblyReference.cache
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.exe
+E:\VS2010\VCS2010\CPArticles\UnderstandingEventsinWCF\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.pdb
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\bin\Debug\EventsLibHost.exe.config
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\bin\Debug\EventsLibHost.exe
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\bin\Debug\EventsLibHost.pdb
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\bin\Debug\EventsLib.dll
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\bin\Debug\EventsLib.pdb
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.csprojResolveAssemblyReference.cache
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.csproj.CoreCompileInputs.cache
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.csproj.CopyComplete
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.exe
+D:\WS Event SI4\SrcEventsLibHost\SrcEventsLibHost\obj\x86\Debug\EventsLibHost.pdb
