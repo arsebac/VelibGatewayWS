@@ -1,8 +1,0 @@
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\bin\Debug\netcoreapp2.0\ConsoleMath.deps.json
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\bin\Debug\netcoreapp2.0\ConsoleMath.runtimeconfig.json
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\bin\Debug\netcoreapp2.0\ConsoleMath.runtimeconfig.dev.json
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\bin\Debug\netcoreapp2.0\ConsoleMath.dll
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\obj\Debug\netcoreapp2.0\ConsoleMath.csprojResolveAssemblyReference.cache
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\obj\Debug\netcoreapp2.0\ConsoleMath.csproj.CoreCompileInputs.cache
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\obj\Debug\netcoreapp2.0\ConsoleMath.AssemblyInfoInputs.cache
-E:\Projets\VS\VelibGatewayWS\TD5\ConsoleMath\obj\Debug\netcoreapp2.0\ConsoleMath.AssemblyInfo.cs

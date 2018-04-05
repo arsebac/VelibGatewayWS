@@ -1,7 +1,0 @@
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\bin\Debug\MathsLibrary.dll.config
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\bin\Debug\MathsLibrary.dll
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\bin\Debug\MathsLibrary.pdb
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\obj\Debug\MathsLibrary.csprojResolveAssemblyReference.cache
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\obj\Debug\MathsLibrary.csproj.CoreCompileInputs.cache
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\obj\Debug\MathsLibrary.dll
-E:\Projets\VS\VelibGatewayWS\TD5\TD5\MathsLibrary\obj\Debug\MathsLibrary.pdb
